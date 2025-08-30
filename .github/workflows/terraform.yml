@@ -1,0 +1,21 @@
+name: terraformWorkflow
+
+on: 
+  push: 
+    branches: 
+    - 'main'
+    - 'feature'
+jobs:
+  my_first_job:
+  runs-pon: ubuntu-latest
+  name: terraformInstall
+    steps: 
+     - name: PowerShell script
+       uses: Amadevus/pwsh-script@v2.0.3
+       with:
+        # PowerShell script to execute in Actions-hydrated context
+        script: terraform init
+                
+    
+      
+      
