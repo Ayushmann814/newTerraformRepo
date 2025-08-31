@@ -5,9 +5,12 @@ on:
     branches: 
     - 'main'
     - 'feature'
+env:
+  environment: dev
+  
 jobs:
   my_first_job:
-  runs-pon: ubuntu-latest
+  runs-on: ubuntu-latest
   name: terraformInstall
     steps: 
      - name: PowerShell script
@@ -15,6 +18,10 @@ jobs:
        with:
         # PowerShell script to execute in Actions-hydrated context
         script: terraform init
+     - name: Azure Login
+       uses: Azure/login@v2.3.0
+       with:
+  
                 
     
       
