@@ -1,0 +1,11 @@
+name: terraformInfraCode
+
+on: workflow_dispatch #for manual trigger and on is case sensitive
+
+jobs:
+  terraform-workflow:
+    runs-on: self-hosted 
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+ 
