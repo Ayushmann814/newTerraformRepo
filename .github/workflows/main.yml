@@ -3,12 +3,24 @@ on:
   push:
     branches:
       - master
+
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        with:
+          client-id: 2a2d774d-acb2-416f-83b6-eb7745e617fe
+          tenant-id: f802e1a9-bd17-4db4-92b1-e977b7fde6d2
+          subscription-id: 9932c99c-ef31-4bee-b035-70dbddf5d26d
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
