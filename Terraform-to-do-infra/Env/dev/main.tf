@@ -6,6 +6,7 @@ module "resource_group" {
 
 module "virtual_network" {
   source = "../../modules/azurerm_virtual_network"
+  depends_on = [ module.resource_group ]
   virtual_networks      = var.virtual_networks
       }
   
@@ -19,5 +20,6 @@ module "acr" {
 
 module "aks" {
   source = "../../modules/azurerm_aks"
+  depends_on = [ module.resource_group ]
 aks_name = var.aks_name
 }
