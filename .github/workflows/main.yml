@@ -16,18 +16,18 @@ jobs:
           terraform_version: 1.5.6
 
       - name: Initialize Terraform
-        working-directory: ./Env/dev
+        working-directory: Terraform-to-do-infra/Env/dev
         run: terraform init
 
       - name: Validate Terraform configuration
-        working-directory: ./Env/dev
+        working-directory: Terraform-to-do-infra/Env/dev
         run: terraform validate
 
       - name: Plan Terraform deployment
-        working-directory: ./Env/dev
+        working-directory: Terraform-to-do-infra/Env/dev
         run: terraform plan
 
 
       - name: Apply Terraform configuration
-        working-directory: ./Env/dev
+        working-directory: Terraform-to-do-infra/Env/dev
         run: terraform apply -auto-approve
