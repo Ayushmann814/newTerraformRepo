@@ -42,7 +42,7 @@ aks_name = {
     resource_group_name = "dev-rg"
     dns_prefix          = "devaksdns"
     default_node_pool_name = "defaultpool"
-    vm_size             = "Standard_D2_v2"
+    vm_size             = "standard_b16ls_v2"
     
   }
 }
