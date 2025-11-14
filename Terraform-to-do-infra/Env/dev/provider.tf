@@ -5,13 +5,7 @@ terraform {
       version = "4.45.1"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "tfstate-rg"
-    storage_account_name = "tftodoinfrastate"
-    container_name       = "tfstate"
-    key                  = "dev.terraform.tfstate"
-    
-  }
+
 }
 
 provider "azurerm" {
@@ -19,5 +13,5 @@ provider "azurerm" {
   features {
     
   }
-  subscription_id = "9932c99c-ef31-4bee-b035-70dbddf5d26d"
+  subscription_id = "1289d0de-a5fd-4b7a-8dee-92b8b0ae1184"
 }
